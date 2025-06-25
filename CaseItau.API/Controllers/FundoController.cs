@@ -69,7 +69,7 @@ namespace CaseItau.API.Controllers
             var con = new SQLiteConnection("Data Source=dbCaseItau.s3db");
             con.Open();
             var cmd = con.CreateCommand();
-            cmd.CommandText = "INSERT INTO FUNDO VALUES('" + value.Codigo + "','" + value.Nome + "','" + value.Cnpj + "',"+value.CodigoTipo.ToString() + ",NULL)";
+            cmd.CommandText = "INSERT INTO FUNDO VALUES('" + value.Codigo + "','" + value.Nome + "','" + value.Cnpj + "',"+value.CodigoTipo.ToString() + "," + value.Patrimonio + ")";
             cmd.CommandType = System.Data.CommandType.Text;
             var resultado = cmd.ExecuteNonQuery();
         }

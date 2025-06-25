@@ -1,0 +1,4 @@
+:: Alterações Realizadas ::
+
+- Alteração versão Framework: .NET Core 3.1 para .NET 8.0
+- Inclusão arquivo .gitignore
