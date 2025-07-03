@@ -2,3 +2,24 @@
 
 - Alteração versão Framework: .NET Core 3.1 para .NET 8.0
 - Inclusão arquivo .gitignore
+- Reestruturação do Projeto, separação em camadas (Boas práticas de programação: SOLID, Clean Architecture)
+	- CaseItau.API
+	- CaseItau.Application
+	- CaseItau.Domain
+	- CaseItau.Infrastructure
+	- CaseItau.UnitTests
+- Remodelação da FundController para utilizar a nova estrutura
+- Criação de UseCase para separação das ações
+- Criação da Service
+- Criação do Repository (Padrão Repository)
+
+- Criação de endpoint Health Check para monitoramento da saúde da aplicação
+- Criação de Middewlare de ExceptionHandler (Excessão Global da Aplicação - Uso do ProblemDetails)
+- Inclusão de interface SwaggerUI
+- Implementação de versionamento da API
+
+- Implementação de AutoMapper com o pacote nuget Mapster
+- Implementação de Acesso a Dados com o ORM EntityFramework
+- Implementação de Testes Unitários (Projeto de teste do tipo xUnit)
+
+- Criação de Dashboard Frontend (Angular) para integração com API 
