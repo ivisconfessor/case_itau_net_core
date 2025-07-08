@@ -10,7 +10,7 @@ namespace CaseItau.Application.Mappings
         {
             return domainError.Code switch
             {
-                // Recursos não encontrados - 404
+                "duplicate_fund_code" => FundErrors.FundAlreadyExits,
                 "fund_not_found" => FundErrors.FundNotFound,
                 "database_error" => FundErrors.DatabaseError
             };

@@ -8,5 +8,7 @@
         public int CodigoTipo { get; set; }
         public string NomeTipo { get; set; }
         public decimal Patrimonio { get; set; }
+        public DateTime DataCriacao { get; set; }
+        public DateTime DataAtualizacao { get; set; }
     }
 }

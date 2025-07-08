@@ -76,6 +76,8 @@ namespace CaseItau.API
 
             app.UseRouting();
 
+            app.UseCors("AllowAngularApp");
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -15,7 +15,9 @@ namespace CaseItau.Application.Mappings
                 .Map(dest => dest.Cnpj, src => src.Cnpj)
                 .Map(dest => dest.CodigoTipo, src => src.FundTypeId)
                 .Map(dest => dest.NomeTipo, src => src.FundTypeName)
-                .Map(dest => dest.Patrimonio, src => src.NetWorth);
+                .Map(dest => dest.Patrimonio, src => src.NetWorth)
+                .Map(dest => dest.DataCriacao, src => src.CreatedAt)
+                .Map(dest => dest.DataAtualizacao, src => src.UpdatedAt);
 
             config.NewConfig<CreateFundRequestDto, Fund>()
                 .Map(dest => dest.Code, src => src.Code)

@@ -23,8 +23,8 @@ namespace CaseItau.Infrastructure.Data
                 entity.Property(f => f.Cnpj).HasColumnName("CNPJ");
                 entity.Property(f => f.FundTypeId).HasColumnName("CODIGO_TIPO");
                 entity.Property(f => f.NetWorth).HasColumnName("PATRIMONIO");
-                //entity.Property(f => f.CreatedAt).HasColumnName("CREATED_AT");
-                //entity.Property(f => f.UpdatedAt).HasColumnName("UPDATED_AT");
+                entity.Property(f => f.CreatedAt).HasColumnName("CREATED_AT");
+                entity.Property(f => f.UpdatedAt).HasColumnName("UPDATED_AT");
 
                 // Relacionamento com FundType
                 entity.HasOne(f => f.FundType)

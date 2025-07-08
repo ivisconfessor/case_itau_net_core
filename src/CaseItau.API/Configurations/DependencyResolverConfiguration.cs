@@ -32,6 +32,7 @@ namespace CaseItau.API.Configurations
             ConfigureApiVersion(services);
             ConfigureSwagger(services);
             ConfigureHealthCheck(services);
+            ConfigureCors(services);
         }
 
         private static void RegisterUseCases(IServiceCollection services)
@@ -118,6 +119,20 @@ namespace CaseItau.API.Configurations
             services.Configure<HealthCheckPublisherOptions>(options =>
             {
                 options.Delay = TimeSpan.FromSeconds(30);
+            });
+        }
+
+        private static void ConfigureCors(IServiceCollection services)
+        {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAngularApp", policy =>
+                {
+                    policy.WithOrigins("http://localhost:4200")
+                          .AllowAnyMethod()
+                          .AllowAnyHeader()
+                          .AllowCredentials();
+                });
             });
         }
     }
